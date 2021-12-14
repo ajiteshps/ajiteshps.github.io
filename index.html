@@ -10,11 +10,11 @@
 <body>
     <style type='text/css'>
         .embeddedServiceHelpButton .helpButton .uiButton {
-            background-color: #00609c;
+            background-color: #000000;
             font-family: "Arial", sans-serif;
         }
         .embeddedServiceHelpButton .helpButton .uiButton:focus {
-            outline: 1px solid #00609c;
+            outline: 1px solid #000000;
         }
     </style>
     
@@ -43,17 +43,17 @@
             embedded_svc.settings.entryFeature = 'LiveAgent';
     
             embedded_svc.init(
-                'https://pgi.my.salesforce.com',
-                'https://pgi.secure.force.com/chatcustompage',
+                'https://brp--bwfitdev2.my.salesforce.com',
+                'https://bwfitdev2-brp.cs203.force.com',
                 gslbBaseURL,
-                '00D30000001H6BZ',
-                'MyMeetingHelp',
+                '00D7j000000GyYX',
+                'ESD_Marketing_EN',
                 {
-                    baseLiveAgentContentURL: 'https://c.la2-c2-ia4.salesforceliveagent.com/content',
-                    deploymentId: '5721B000000LQJc',
-                    buttonId: '5731B000000HEDG',
-                    baseLiveAgentURL: 'https://d.la2-c2-ia4.salesforceliveagent.com/chat',
-                    eswLiveAgentDevName: 'EmbeddedServiceLiveAgent_Parent04I1B000000000aUAA_171aa4c891f',
+                    baseLiveAgentContentURL: 'https://c.la3-c1cs-ia4.salesforceliveagent.com/content',
+                    deploymentId: '572550000004D3H',
+                    buttonId: '573550000004Dp4',
+                    baseLiveAgentURL: 'https://d.la3-c1cs-ia4.salesforceliveagent.com/chat',
+                    eswLiveAgentDevName: 'EmbeddedServiceLiveAgent_Parent04I020000008OJSEA2_174db4b2cc9',
                     isOfflineSupportEnabled: false
                 }
             );
@@ -61,7 +61,7 @@
     
         if (!window.embedded_svc) {
             var s = document.createElement('script');
-            s.setAttribute('src', 'https://pgi.my.salesforce.com/embeddedservice/5.0/esw.min.js');
+            s.setAttribute('src', 'https://brp--bwfitdev2.my.salesforce.com/embeddedservice/5.0/esw.min.js');
             s.onload = function() {
                 initESW(null);
             };
