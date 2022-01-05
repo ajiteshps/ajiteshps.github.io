@@ -3,18 +3,18 @@
 <head>
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>Page Title 5</title>
+    <title>Page Title 6</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     
 </head>
 <body>
     <style type='text/css'>
         .embeddedServiceHelpButton .helpButton .uiButton {
-            background-color: #53A318;
+            background-color: #005290;
             font-family: "Salesforce Sans", sans-serif;
         }
         .embeddedServiceHelpButton .helpButton .uiButton:focus {
-            outline: 1px solid #53A318;
+            outline: 1px solid #005290;
         }
         @font-face {
             font-family: 'Salesforce Sans';
@@ -48,25 +48,25 @@
             embedded_svc.settings.entryFeature = 'LiveAgent';
     
             embedded_svc.init(
-                'https://groupon-dev.my.salesforce.com',
-                'https://grouponna.secure.force.com/livechat',
+                'https://d5g000004oyknea0-dev-ed.my.salesforce.com',
+                'https://ssosetuptraining-developer-edition.ap24.force.com/partner',
                 gslbBaseURL,
-                '00D80000000Khmy',
-                'NL_Chat_Snapin_Local',
+                '00D5g000004OyKN',
+                'Chats_Agents',
                 {
-                    baseLiveAgentContentURL: 'https://c.la3-c2-ph2.salesforceliveagent.com/content',
-                    deploymentId: '572C0000000Cfhh',
-                    buttonId: '573C0000000Cg59',
-                    baseLiveAgentURL: 'https://d.la3-c2-ph2.salesforceliveagent.com/chat',
-                    eswLiveAgentDevName: 'EmbeddedServiceLiveAgent_Parent04IC0000000002CMAQ_165f74eaa83',
-                    isOfflineSupportEnabled: false
+                    baseLiveAgentContentURL: 'https://c.la2-c1-ukb.salesforceliveagent.com/content',
+                    deploymentId: '5725g000000CoQ8',
+                    buttonId: '5735g000000CqtD',
+                    baseLiveAgentURL: 'https://d.la2-c1-ukb.salesforceliveagent.com/chat',
+                    eswLiveAgentDevName: 'Chats_Agents',
+                    isOfflineSupportEnabled: true
                 }
             );
         };
     
         if (!window.embedded_svc) {
             var s = document.createElement('script');
-            s.setAttribute('src', 'https://groupon-dev.my.salesforce.com/embeddedservice/5.0/esw.min.js');
+            s.setAttribute('src', 'https://d5g000004oyknea0-dev-ed.my.salesforce.com/embeddedservice/5.0/esw.min.js');
             s.onload = function() {
                 initESW(null);
             };
