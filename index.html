@@ -3,18 +3,23 @@
 <head>
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>Page Title 4</title>
+    <title>Page Title 5</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     
 </head>
 <body>
     <style type='text/css'>
         .embeddedServiceHelpButton .helpButton .uiButton {
-            background-color: #005290;
-            font-family: "Arial", sans-serif;
+            background-color: #53A318;
+            font-family: "Salesforce Sans", sans-serif;
         }
         .embeddedServiceHelpButton .helpButton .uiButton:focus {
-            outline: 1px solid #005290;
+            outline: 1px solid #53A318;
+        }
+        @font-face {
+            font-family: 'Salesforce Sans';
+            src: url('https://c1.sfdcstatic.com/etc/clientlibs/sfdc-aem-master/clientlibs_base/fonts/SalesforceSans-Regular.woff') format('woff'),
+            url('https://c1.sfdcstatic.com/etc/clientlibs/sfdc-aem-master/clientlibs_base/fonts/SalesforceSans-Regular.ttf') format('truetype');
         }
     </style>
     
@@ -43,17 +48,17 @@
             embedded_svc.settings.entryFeature = 'LiveAgent';
     
             embedded_svc.init(
-                'https://groupon-dev--staging.my.salesforce.com',
-                'https://staging-grouponna.cs14.force.com/livechat',
+                'https://groupon-dev.my.salesforce.com',
+                'https://grouponna.secure.force.com/livechat',
                 gslbBaseURL,
-                '00Dc0000003sR2X',
-                'AU_Local',
+                '00D80000000Khmy',
+                'NL_Chat_Snapin_Local',
                 {
-                    baseLiveAgentContentURL: 'https://c.la1-c1cs-iad.salesforceliveagent.com/content',
-                    deploymentId: '572c00000008OQ4',
-                    buttonId: '573c0000000CbVY',
-                    baseLiveAgentURL: 'https://d.la1-c1cs-iad.salesforceliveagent.com/chat',
-                    eswLiveAgentDevName: 'EmbeddedServiceLiveAgent_Parent04Ic000000000RlEAI_17ad1af2d9e',
+                    baseLiveAgentContentURL: 'https://c.la3-c2-ph2.salesforceliveagent.com/content',
+                    deploymentId: '572C0000000Cfhh',
+                    buttonId: '573C0000000Cg59',
+                    baseLiveAgentURL: 'https://d.la3-c2-ph2.salesforceliveagent.com/chat',
+                    eswLiveAgentDevName: 'EmbeddedServiceLiveAgent_Parent04IC0000000002CMAQ_165f74eaa83',
                     isOfflineSupportEnabled: false
                 }
             );
@@ -61,7 +66,7 @@
     
         if (!window.embedded_svc) {
             var s = document.createElement('script');
-            s.setAttribute('src', 'https://groupon-dev--staging.my.salesforce.com/embeddedservice/5.0/esw.min.js');
+            s.setAttribute('src', 'https://groupon-dev.my.salesforce.com/embeddedservice/5.0/esw.min.js');
             s.onload = function() {
                 initESW(null);
             };
