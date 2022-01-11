@@ -3,18 +3,18 @@
 <head>
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>Show Queue Position</title>
+    <title>Post chat URL</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     
 </head>
 <body>
     <style type='text/css'>
         .embeddedServiceHelpButton .helpButton .uiButton {
-            background-color: #005290;
+            background-color: #000000;
             font-family: "Arial", sans-serif;
         }
         .embeddedServiceHelpButton .helpButton .uiButton:focus {
-            outline: 1px solid #005290;
+            outline: 1px solid #000000;
         }
     </style>
     
@@ -43,25 +43,25 @@
             embedded_svc.settings.entryFeature = 'LiveAgent';
     
             embedded_svc.init(
-                'https://groupon-dev--staging.my.salesforce.com',
-                'https://staging-grouponna.cs14.force.com/livechat',
+                'https://mantrac.my.salesforce.com',
+                'https://mantrac.secure.force.com/LiveChat',
                 gslbBaseURL,
-                '00Dc0000003sR2X',
-                'AU_Local',
+                '00Db0000000J0lp',
+                'Chat_Queue',
                 {
-                    baseLiveAgentContentURL: 'https://c.la1-c1cs-iad.salesforceliveagent.com/content',
-                    deploymentId: '572c00000008OQ4',
-                    buttonId: '573c0000000CbVY',
-                    baseLiveAgentURL: 'https://d.la1-c1cs-iad.salesforceliveagent.com/chat',
-                    eswLiveAgentDevName: 'EmbeddedServiceLiveAgent_Parent04Ic000000000RlEAI_17ad1af2d9e',
-                    isOfflineSupportEnabled: false
+                    baseLiveAgentContentURL: 'https://c.la2-c2-cdg.salesforceliveagent.com/content',
+                    deploymentId: '5720N0000008fDK',
+                    buttonId: '5735I000000PV0Y',
+                    baseLiveAgentURL: 'https://d.la2-c2-cdg.salesforceliveagent.com/chat',
+                    eswLiveAgentDevName: 'Chat_Queue',
+                    isOfflineSupportEnabled: true
                 }
             );
         };
     
         if (!window.embedded_svc) {
             var s = document.createElement('script');
-            s.setAttribute('src', 'https://groupon-dev--staging.my.salesforce.com/embeddedservice/5.0/esw.min.js');
+            s.setAttribute('src', 'https://mantrac.my.salesforce.com/embeddedservice/5.0/esw.min.js');
             s.onload = function() {
                 initESW(null);
             };
