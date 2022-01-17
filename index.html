@@ -3,18 +3,18 @@
 <head>
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>Post chat URL (NEW CODE)</title>
+    <title>Darwin's Natural Pet Products</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     
 </head>
 <body>
     <style type='text/css'>
         .embeddedServiceHelpButton .helpButton .uiButton {
-            background-color: #000000;
+            background-color: #242525;
             font-family: "Arial", sans-serif;
         }
         .embeddedServiceHelpButton .helpButton .uiButton:focus {
-            outline: 1px solid #000000;
+            outline: 1px solid #242525;
         }
     </style>
     
@@ -43,25 +43,25 @@
             embedded_svc.settings.entryFeature = 'LiveAgent';
     
             embedded_svc.init(
-                'https://mantrac.my.salesforce.com',
-                'https://mantrac.secure.force.com/LiveChat',
+                'https://darwinspet--staging.my.salesforce.com',
+                'https://staging-darwinspetcommunity.cs124.force.com/faq',
                 gslbBaseURL,
-                '00Db0000000J0lp',
-                'Chat_Queue',
+                '00D3J0000000Zcd',
+                'Darwin_Chat',
                 {
-                    baseLiveAgentContentURL: 'https://c.la2-c2-cdg.salesforceliveagent.com/content',
-                    deploymentId: '5720N0000008fDK',
-                    buttonId: '5735I000000PV0Y',
-                    baseLiveAgentURL: 'https://d.la2-c2-cdg.salesforceliveagent.com/chat',
-                    eswLiveAgentDevName: 'Chat_Queue',
-                    isOfflineSupportEnabled: true
+                    baseLiveAgentContentURL: 'https://c.la1-c1cs-ia5.salesforceliveagent.com/content',
+                    deploymentId: '5723J0000004CNj',
+                    buttonId: '5733J0000004CdX',
+                    baseLiveAgentURL: 'https://d.la1-c1cs-ia5.salesforceliveagent.com/chat',
+                    eswLiveAgentDevName: 'Darwin_Chat',
+                    isOfflineSupportEnabled: false
                 }
             );
         };
     
         if (!window.embedded_svc) {
             var s = document.createElement('script');
-            s.setAttribute('src', 'https://mantrac.my.salesforce.com/embeddedservice/5.0/esw.min.js');
+            s.setAttribute('src', 'https://darwinspet--staging.my.salesforce.com/embeddedservice/5.0/esw.min.js');
             s.onload = function() {
                 initESW(null);
             };
