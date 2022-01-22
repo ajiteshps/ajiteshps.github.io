@@ -3,23 +3,18 @@
 <head>
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>Live Chat Email Display as Hyperlink</title>
+    <title>Flow called from Einstein bot</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     
 </head>
 <body>
     <style type='text/css'>
         .embeddedServiceHelpButton .helpButton .uiButton {
-            background-color: #FFC804;
-            font-family: "Salesforce Sans", sans-serif;
+            background-color: #005290;
+            font-family: "Arial", sans-serif;
         }
         .embeddedServiceHelpButton .helpButton .uiButton:focus {
-            outline: 1px solid #FFC804;
-        }
-        @font-face {
-            font-family: 'Salesforce Sans';
-            src: url('https://c1.sfdcstatic.com/etc/clientlibs/sfdc-aem-master/clientlibs_base/fonts/SalesforceSans-Regular.woff') format('woff'),
-            url('https://c1.sfdcstatic.com/etc/clientlibs/sfdc-aem-master/clientlibs_base/fonts/SalesforceSans-Regular.ttf') format('truetype');
+            outline: 1px solid #005290;
         }
     </style>
     
@@ -48,25 +43,25 @@
             embedded_svc.settings.entryFeature = 'LiveAgent';
     
             embedded_svc.init(
-                'https://exness.my.salesforce.com',
-                'https://exness.secure.force.com/livechatsiteendpoint',
+                'https://d5g000004oyknea0-dev-ed.my.salesforce.com',
+                'https://assessment-sites-developer-edition.ap24.force.com/temp',
                 gslbBaseURL,
-                '00D58000000Kpf3',
-                'Global_Chat',
+                '00D5g000004OyKN',
+                'Pre_Chat_Agents',
                 {
-                    baseLiveAgentContentURL: 'https://c.la1-c2-lo3.salesforceliveagent.com/content',
-                    deploymentId: '5724I000000kAAL',
-                    buttonId: '5734I000000kACC',
-                    baseLiveAgentURL: 'https://d.la1-c2-lo3.salesforceliveagent.com/chat',
-                    eswLiveAgentDevName: 'EmbeddedServiceLiveAgent_Parent04I4I000000fxYyUAI_1727d25caad',
-                    isOfflineSupportEnabled: false
+                    baseLiveAgentContentURL: 'https://c.la2-c1-ukb.salesforceliveagent.com/content',
+                    deploymentId: '5725g000000CoQ8',
+                    buttonId: '5735g000000CqtD',
+                    baseLiveAgentURL: 'https://d.la2-c1-ukb.salesforceliveagent.com/chat',
+                    eswLiveAgentDevName: 'EmbeddedServiceLiveAgent_Parent04I5g0000004ZD8EAM_17b76dce201',
+                    isOfflineSupportEnabled: true
                 }
             );
         };
     
         if (!window.embedded_svc) {
             var s = document.createElement('script');
-            s.setAttribute('src', 'https://exness.my.salesforce.com/embeddedservice/5.0/esw.min.js');
+            s.setAttribute('src', 'https://d5g000004oyknea0-dev-ed.my.salesforce.com/embeddedservice/5.0/esw.min.js');
             s.onload = function() {
                 initESW(null);
             };
