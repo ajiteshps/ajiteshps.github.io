@@ -3,23 +3,18 @@
 <head>
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>Special Character Issue</title>
+    <title>LWC Issue</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     
 </head>
 <body>
     <style type='text/css'>
         .embeddedServiceHelpButton .helpButton .uiButton {
-            background-color: #FFC804;
-            font-family: "Salesforce Sans", sans-serif;
+            background-color: #FFBC0D;
+            font-family: "Arial", sans-serif;
         }
         .embeddedServiceHelpButton .helpButton .uiButton:focus {
-            outline: 1px solid #FFC804;
-        }
-        @font-face {
-            font-family: 'Salesforce Sans';
-            src: url('https://c1.sfdcstatic.com/etc/clientlibs/sfdc-aem-master/clientlibs_base/fonts/SalesforceSans-Regular.woff') format('woff'),
-            url('https://c1.sfdcstatic.com/etc/clientlibs/sfdc-aem-master/clientlibs_base/fonts/SalesforceSans-Regular.ttf') format('truetype');
+            outline: 1px solid #FFBC0D;
         }
     </style>
     
@@ -48,25 +43,25 @@
             embedded_svc.settings.entryFeature = 'LiveAgent';
     
             embedded_svc.init(
-                'https://exness.my.salesforce.com',
-                'https://exness.secure.force.com/livechatsiteendpoint',
+                'https://mcdonalds--mcbot.my.salesforce.com',
+                'https://mcbot-mcdonaldchat.cs58.force.com/liveAgentSetupFlow',
                 gslbBaseURL,
-                '00D58000000Kpf3',
-                'Global_Chat',
+                '00D0l0000003HKJ',
+                'Customer_Service_Team',
                 {
-                    baseLiveAgentContentURL: 'https://c.la1-c2-lo3.salesforceliveagent.com/content',
-                    deploymentId: '5724I000000kAAL',
-                    buttonId: '5734I000000kACC',
-                    baseLiveAgentURL: 'https://d.la1-c2-lo3.salesforceliveagent.com/chat',
-                    eswLiveAgentDevName: 'EmbeddedServiceLiveAgent_Parent04I4I000000fxYyUAI_1727d25caad',
-                    isOfflineSupportEnabled: false
+                    baseLiveAgentContentURL: 'https://c.la1-c1cs-ukb.salesforceliveagent.com/content',
+                    deploymentId: '5722s0000000018',
+                    buttonId: '5732s000000001N',
+                    baseLiveAgentURL: 'https://d.la1-c1cs-ukb.salesforceliveagent.com/chat',
+                    eswLiveAgentDevName: 'Customer_Service_Team',
+                    isOfflineSupportEnabled: true
                 }
             );
         };
     
         if (!window.embedded_svc) {
             var s = document.createElement('script');
-            s.setAttribute('src', 'https://exness.my.salesforce.com/embeddedservice/5.0/esw.min.js');
+            s.setAttribute('src', 'https://mcdonalds--mcbot.my.salesforce.com/embeddedservice/5.0/esw.min.js');
             s.onload = function() {
                 initESW(null);
             };
