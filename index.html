@@ -3,23 +3,18 @@
 <head>
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>UAT Issue</title>
+    <title>Lable Change</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     
 </head>
 <body>
     <style type='text/css'>
         .embeddedServiceHelpButton .helpButton .uiButton {
-            background-color: #FACF00;
-            font-family: "Salesforce Sans", sans-serif;
+            background-color: #005290;
+            font-family: "Arial", sans-serif;
         }
         .embeddedServiceHelpButton .helpButton .uiButton:focus {
-            outline: 1px solid #FACF00;
-        }
-        @font-face {
-            font-family: 'Salesforce Sans';
-            src: url('https://c1.sfdcstatic.com/etc/clientlibs/sfdc-aem-master/clientlibs_base/fonts/SalesforceSans-Regular.woff') format('woff'),
-            url('https://c1.sfdcstatic.com/etc/clientlibs/sfdc-aem-master/clientlibs_base/fonts/SalesforceSans-Regular.ttf') format('truetype');
+            outline: 1px solid #005290;
         }
     </style>
     
@@ -48,17 +43,17 @@
             embedded_svc.settings.entryFeature = 'LiveAgent';
     
             embedded_svc.init(
-                'https://litfibre--uat.my.salesforce.com',
-                'https://uat-litfibre.cs81.force.com/help',
+                'https://ccfutures-eu-gsk--euuat.my.salesforce.com',
+                'https://euuat-ccfutures-eu-gsk-liveagent.cs102.force.com/DE',
                 gslbBaseURL,
-                '00D26000000FlV1',
-                'Lit_Fibre_Chat',
+                '00D1j0000008av0',
+                'DE_InTra',
                 {
-                    baseLiveAgentContentURL: 'https://c.la1-c1cs-lo2.salesforceliveagent.com/content',
-                    deploymentId: '572260000004Cct',
-                    buttonId: '573260000004CqM',
-                    baseLiveAgentURL: 'https://d.la1-c1cs-lo2.salesforceliveagent.com/chat',
-                    eswLiveAgentDevName: 'LitFibre_Agents1',
+                    baseLiveAgentContentURL: 'https://c.la1-c1cs-fra.salesforceliveagent.com/content',
+                    deploymentId: '5726M0000004FcV',
+                    buttonId: '5736M0000004FsD',
+                    baseLiveAgentURL: 'https://d.la1-c1cs-fra.salesforceliveagent.com/chat',
+                    eswLiveAgentDevName: 'EmbeddedServiceLiveAgent_Parent04I1j00000001ILEAY_17e298e730d',
                     isOfflineSupportEnabled: true
                 }
             );
@@ -66,7 +61,7 @@
     
         if (!window.embedded_svc) {
             var s = document.createElement('script');
-            s.setAttribute('src', 'https://litfibre--uat.my.salesforce.com/embeddedservice/5.0/esw.min.js');
+            s.setAttribute('src', 'https://ccfutures-eu-gsk--euuat.my.salesforce.com/embeddedservice/5.0/esw.min.js');
             s.onload = function() {
                 initESW(null);
             };
