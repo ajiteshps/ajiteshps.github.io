@@ -3,7 +3,7 @@
 <head>
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>UAT Issue</title>
+    <title>Production Issue</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     
 </head>
@@ -11,15 +11,10 @@
     <style type='text/css'>
         .embeddedServiceHelpButton .helpButton .uiButton {
             background-color: #FACF00;
-            font-family: "Salesforce Sans", sans-serif;
+            font-family: "Trebuchet MS", sans-serif;
         }
         .embeddedServiceHelpButton .helpButton .uiButton:focus {
             outline: 1px solid #FACF00;
-        }
-        @font-face {
-            font-family: 'Salesforce Sans';
-            src: url('https://c1.sfdcstatic.com/etc/clientlibs/sfdc-aem-master/clientlibs_base/fonts/SalesforceSans-Regular.woff') format('woff'),
-            url('https://c1.sfdcstatic.com/etc/clientlibs/sfdc-aem-master/clientlibs_base/fonts/SalesforceSans-Regular.ttf') format('truetype');
         }
     </style>
     
@@ -48,17 +43,17 @@
             embedded_svc.settings.entryFeature = 'LiveAgent';
     
             embedded_svc.init(
-                'https://litfibre--uat.my.salesforce.com',
-                'https://uat-litfibre.cs81.force.com/help',
+                'https://litfibre.my.salesforce.com',
+                'https://help.litfibre.com/',
                 gslbBaseURL,
-                '00D26000000FlV1',
+                '00D4L000000CplT',
                 'Lit_Fibre_Chat',
                 {
-                    baseLiveAgentContentURL: 'https://c.la1-c1cs-lo2.salesforceliveagent.com/content',
-                    deploymentId: '572260000004Cct',
-                    buttonId: '573260000004CqM',
-                    baseLiveAgentURL: 'https://d.la1-c1cs-lo2.salesforceliveagent.com/chat',
-                    eswLiveAgentDevName: 'LitFibre_Agents1',
+                    baseLiveAgentContentURL: 'https://c.la1-c2-lo2.salesforceliveagent.com/content',
+                    deploymentId: '5724L0000004J1S',
+                    buttonId: '5734L0000004JAM',
+                    baseLiveAgentURL: 'https://d.la1-c2-lo2.salesforceliveagent.com/chat',
+                    eswLiveAgentDevName: 'EmbeddedServiceLiveAgent_Parent04I4L000000GsSDUA0_178c6f5dd38',
                     isOfflineSupportEnabled: true
                 }
             );
@@ -66,7 +61,7 @@
     
         if (!window.embedded_svc) {
             var s = document.createElement('script');
-            s.setAttribute('src', 'https://litfibre--uat.my.salesforce.com/embeddedservice/5.0/esw.min.js');
+            s.setAttribute('src', 'https://litfibre.my.salesforce.com/embeddedservice/5.0/esw.min.js');
             s.onload = function() {
                 initESW(null);
             };
@@ -75,5 +70,4 @@
             initESW('https://service.force.com');
         }
     </script>
-</body>
 </html>
